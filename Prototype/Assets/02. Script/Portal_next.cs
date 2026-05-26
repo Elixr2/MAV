@@ -13,13 +13,10 @@ public class Portal_next : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-    {
-        if (other.CompareTag("Player"))
-            {
-                playerInPortal = true;
-                Debug.Log("Player entered portal zone");
-            }
-    }
+        if (other.CompareTag("Player")) {
+            playerInPortal = true;
+            Debug.Log("Player entered portal zone");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

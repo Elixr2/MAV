@@ -233,8 +233,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1417556077
-  m_SortingLayer: 0
+  m_SortingLayerID: -1632093241
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
@@ -574,7 +574,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -713,9 +713,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac8390b2fdda5e4b813951d08cd15c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
-  speed: 5
+  speed: 6
   jump: {x: 0, y: 0}
-  jumpForce: 4
+  jumpForce: 9
   isGrounded: 0
 --- !u!1 &619394800
 GameObject:
