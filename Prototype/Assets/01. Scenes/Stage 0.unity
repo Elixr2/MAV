@@ -1187,7 +1187,7 @@ GameObject:
   - component: {fileID: 1658993518}
   m_Layer: 1
   m_Name: Portal_next_stage
-  m_TagString: Finish
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
