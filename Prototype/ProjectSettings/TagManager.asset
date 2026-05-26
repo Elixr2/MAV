@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -59,6 +60,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1340023117
+    locked: 0
+  - name: Portal
+    uniqueID: 1417556077
     locked: 0
   m_RenderingLayers:
   - Default
