@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour
     public Vector2 jump;
     public float jumpForce = 2.0f;
     public bool isGrounded;
+    public Transform groundCheck;
     void Awake()
     {
         tr = GetComponent<Transform>();
@@ -22,10 +23,12 @@ public class PlayerMove : MonoBehaviour
         float h = Input.GetAxis("Horizontal"); //a 일떄 -1, d 일때 1, 그외 0
         float v = Input.GetAxis("Vertical"); //w 일떄 1, s 일떄 -1, 그외 0 (우리 게임에서는 점프 외에는 y축 이동이 없으므로 v는 사용하지 않음)
         rb.linearVelocity = new Vector2(h * speed, rb.linearVelocity.y); //a와 d키로 좌우 이동, y축 이동은 없으므로 0을 전달
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
+         // Raycast로 땅 판정
+        isGrounded = Physics2D.Raycast(groundCheck.position, Vector2.down, 3f, LayerMask.GetMask("Ground"));
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(jump * jumpForce, ForceMode2D.Impulse);
-            isGrounded = false;
         }
     }
 
