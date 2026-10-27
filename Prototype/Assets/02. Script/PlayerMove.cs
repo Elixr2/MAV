@@ -4,9 +4,9 @@ public class PlayerMove : MonoBehaviour
 {
     Transform tr;
     Rigidbody2D rb;
-    public float speed = 10.0f;
+    public float speed = 6.0f;
     public Vector2 jump;
-    public float jumpForce = 2.0f;
+    public float jumpForce = 4.0f;
     public bool isGrounded;
     public Transform groundCheck;
     void Awake()
@@ -34,9 +34,14 @@ public class PlayerMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("OnewayGround"))
         {
             isGrounded = true;
+
+            if (collision.gameObject.CompareTag("OnewayGround") && Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                isGrounded = false;
+            }
         }
     }
 } 

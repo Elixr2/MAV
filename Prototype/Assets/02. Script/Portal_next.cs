@@ -31,7 +31,7 @@ public class Portal_next : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerInPortal && Input.GetKeyDown(KeyCode.UpArrow))
+        if (playerInPortal && (Input.GetKeyDown(KeyCode.UpArrow) ||Input.GetKeyDown(KeyCode.W)))
         {
             SceneManager.LoadScene(nextSceneName);
             print("Success");
